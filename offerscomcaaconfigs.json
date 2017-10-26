@@ -1,0 +1,295 @@
+[
+  {
+    "url": ".homedepot.com/mycart/home",
+    "controls": {
+      "promo": ".promotion .form-input__field",
+      "total": ".price div"
+    },
+    "apply": {
+      "type": "click",
+      "timeout": 2000,
+      "submit": ".promotion .bttn-outline"
+    }
+  },
+  {
+    "url": ".amazon.com/gp/buy/spc/handlers/display",
+    "controls": {
+      "promo": "#spc-gcpromoinput",
+      "total": ".grand-total-price strong"
+    },
+    "apply": {
+      "type": "click",
+      "timeout": 2000,
+      "submit": "#spc-top input.a-button-text.a-declarative"
+    }
+  },
+  {
+    "url": ".potterybarn.com/checkout/payment",
+    "controls": {
+      "promo": "#promoCode",
+      "total": ".price-amount"
+    },
+    "apply": {
+      "type": "submit",
+      "submit": "#applyPromo",
+      "form": "#paymentInformation"
+    }
+  },
+  {
+    "url": ".toms.com/checkout/ship/shipping_method",
+    "controls": {
+      "promo": "#couponForm2 .promotion-code.requiredPromoCode",
+      "total": ".items_total .ln-amt.tot"
+    },
+    "apply": {
+      "type": "submit",
+      "submit": "#atg_store_applyCoupon",
+      "form": "#couponForm2"
+    }
+  },
+  {
+    "url": ".yugster.com/cart",
+    "controls": {
+      "promo": "#coupon_coupon",
+      "total": ".grand_total th"
+    },
+    "apply": {
+      "type": "submit",
+      "submit": ".form-inline .btn",
+      "form": ".form-inline"
+    }
+  },
+  {
+    "promo": ".accordionBody div[data-bind=\"if: payments.hasPromo()\"] .discountText",
+    "url": ".cabelas.com/shop/checkout/basket/view",
+    "controls": {
+      "promo": "#promoCode",
+      "total": ".totalClass .total:visible"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#applyPromoButton",
+      "timeout": 2500
+    },
+    "remove": {
+      "type": "click",
+      "submit": ".removePromoLink",
+      "timeout": 2000
+    }
+  },
+  {
+    "url": ".eastbay.com/shoppingcart",
+    "controls": {
+      "promo": "#estimator_sourcecode",
+      "total": "[data-cartvalue=\"orderTotal\"] .value"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#estimator_apply_button",
+      "timeout": 2500
+    }
+  },
+  {
+  	"coupon": "#promoCodePane_viewData",
+    "url": ".eastbay.com/checkout",
+    "controls": {
+      "promo": "#CPCOrSourceCode",
+      "total": "#reviewPaneGrandTotal"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#applyPromo",
+      "timeout": 2500
+    }
+  },
+  {
+  	"coupon": ".codeRemove",
+    "url": ".worldmarket.com/checkout/accordioncheckout.do",
+    "controls": {
+      "promo": "#sourceCode",
+      "total": ".ml-summary-total .ml-accordion-summary-item-value.ng-binding:last"
+    },
+    "apply": {
+      "type": "click",
+      "submit": ".ml-payment-source-code-apply .ml-button-submit-primary",
+      "timeout": 2500
+    },
+    "remove": {
+      "type": "click",
+      "submit": ".codeRemove",
+      "timeout": 2000
+    }
+  },
+  {
+  	"coupon": ".remove-coupon",
+    "url": ".sears.com/crsp/mx/cart",
+    "controls": {
+      "promo": "#focusPromoInput",
+      "total": "strong.ng-binding:last"
+    },
+    "apply": {
+      "type": "click",
+      "submit": ".shc-btn.cc-add",
+      "timeout": 2500
+    },
+    "remove": {
+      "type": "click",
+      "submit": ".remove-coupon",
+      "timeout": 2000
+    }
+  },
+  {
+    "promo": "#displayPromoBlock",
+    "url": ".westelm.com/checkout/payment",
+    "controls": {
+      "promo": "#promoCode",
+      "total": ".order-summary-tally.order-summary-tally-total-block .price-amount"
+    },
+    "apply": {
+      "type": "submit",
+      "submit": "#applyPromo",
+      "form": "#paymentInformation",
+      "response": {
+        "type": "html",
+        "total": ".order-summary-tally.order-summary-tally-total-block .price-amount"
+      }
+    },
+    "remove": {
+      "type": "submit",
+      "submit": "#removePromoButton"
+    }
+  },
+  {
+  	"coupon": "#coupon-code-remove-btn",
+    "url": ".hotels.com/bookingInitialise.do",
+    "controls": {
+      "promo": "#coupon-code-field",
+      "total": "#financial-details-total-price"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#coupon-code-apply-btn",
+      "timeout": 4000
+    },
+    "remove": {
+    	"type": "click",
+      "submit": "#coupon-code-remove-btn",
+      	"timeout": 4000
+    }
+  },
+  {
+    "url": ".lids.com/cart",
+    "controls": {
+      "promo": "#couponCode",
+      "total": ".total-value"
+    },
+    "apply": {
+      "type": "click",
+      "iframe": true,
+      "submit": "#applyCoupon",
+      "timeout": 3000
+    },
+    "remove": {
+      "type": "post",
+      "url": "https://www.lids.com/cart/removeVoucher",
+      "submit": ".removeVoucherLink"
+    }
+  },
+  {
+    "url": ".lids.com/checkout/multi/delivery-address/add",
+    "controls": {
+      "promo": "#couponCode",
+      "total": ".total-value"
+    },
+    "apply": {
+      "type": "click",
+      "iframe": true,
+      "submit": "#applyCoupon",
+      "timeout": 3000
+    },
+    "remove": {
+      "type": "post",
+      "url": "https://www.lids.com/cart/removeVoucher",
+      "submit": ".removeVoucherLink"
+    }
+  },
+  {
+    "url": ".jcpenney.com/cart",
+    "controls": {
+      "promo": ".ApplyCouponInputBox-applyCouponInputInput:first",
+      "total": ".CartPageWrapper-orderSummaryWrapper .OrderTotal-totalPrice.OrderTotal-right strong:first"
+    },
+    "apply": {
+      "type": "post",
+      "submit": ".Button-btn.Button-btnDefault.Button-btnDefault.ApplyCouponInputBox-applyCouponInputBtn:first",
+      "url": "https://order-api.jcpenney.com/order-api/v1/accounts/-jdQ173-VZADp19mDSft/draft-order/adjustment/discounts",
+      "data": {
+        "code": "%promo"
+      },
+      "response": {
+        "type": "json",
+        "total": "amount"
+      }
+    },
+    "remove": {
+      "type": "click",
+      "timeout": 3000,
+      "submit": "button[data-automation-id=\"at-remove-coupon\"]:first"
+    }
+  },
+  {
+    "url": ".footlocker.com/shoppingcart/default.cfm",
+    "controls": {
+      "promo": "#estimator_sourcecode",
+      "total": "#estimator_total td"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#estimator_submit a",
+      "timeout": 4000
+    }
+  },
+  {
+  	"coupon": "#promoCodePane_viewData",
+    "url": ".footlocker.com/checkout",
+    "controls": {
+      "promo": "#CPCOrSourceCode",
+      "total": "#reviewPaneGrandTotal"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#applyPromo",
+      "timeout": 4000
+    }
+  },
+  {
+    "coupon": ".cancel-offer",
+    "url": ".kohls.com/checkout/v2/checkout",
+    "controls": {
+      "promo": "#promo-kcInput",
+      "total": "#totalcharges"
+    },
+    "apply": {
+      "type": "click",
+      "submit": "#applyInputButton",
+      "timeout": 3000
+    },
+    "remove": {
+      "type": "click",
+      "submit": ".cancel-offer",
+      "timeout": 3000
+    }
+  },
+  {
+    "url": ".macys.com/bag/index.ognc",
+    "apply": {
+      "type": "click",
+      "timeout": 2000,
+      "submit": "#applyPromoCode"
+    },
+    "controls": {
+      "promo": "#promoCode",
+      "total": "#bagTotal"
+    }
+  }
+]
